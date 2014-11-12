@@ -95,6 +95,50 @@ body {
 	border-top-color:#d5d5d5
 	}
 
+.about .jumbotron {
+	padding: 30px 15px;
+	margin-bottom: 30px;
+	color:inherit;
+	background-color: #eee;
+	border-bottom: 1px solid #eee;
+    background: url("jumbotron3.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+.about .jumbotron .container {
+	padding-top: 50px;
+}
+
+.about .jumbotron h1 {
+	color: #fff;
+	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 48px;
+	text-shadow: 1px 1px 2px #000000;
+	font-style: bold;
+	font-weight: 900;
+	line-height: 200px;
+	}
+
+.about .jumbotron h2 {
+	color: #fff;
+	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-shadow: 1px 1px 2px #000000;
+	}
+
+.about .jumbotron p {
+	color: #fff;
+	margin-bottom:15px;
+	font-size:20px;
+	font-weight:200;
+	font-style: normal;
+	line-height: 30px;
+	word-spacing: 0px;
+}
+
 
 .listing_show .container {
 	padding: 50px;
