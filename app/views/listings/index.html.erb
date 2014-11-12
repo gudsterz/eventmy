@@ -20,6 +20,7 @@
              <div class="caption">
                <h3><%= listing.name %></h3>
                <p><strong><%= number_to_currency(listing.price) %></strong></p>
+               <p><%= "By #{listing.user.name}" %></p>
                <p><%= link_to 'Join Event', listing, class: "btn btn-danger btn-xs" %></p>
                <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
                <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
