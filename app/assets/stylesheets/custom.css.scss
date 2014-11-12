@@ -2,12 +2,14 @@
 
 body {
 	background-color: #F5F5F1;
-	color: #333333;
+	color: #000000;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-default {
-	background-color: #EFEFEB;
+	background-color: #333333;
+	margin: 0;
+	padding: 0px;
 }
 
 .navbar-default .navbar-brand {
@@ -18,10 +20,10 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	color: #0192B5;
+	color: #f2f2f2;
 }
 
 .center {
@@ -45,6 +47,62 @@ body {
 	}
 	p {
 		font-size: 15px;
-		margin: 0px;
 	}
+}
+
+
+.jumbotron {
+	padding: 30px 15px;
+	margin-bottom: 30px;
+	color:inherit;
+	background-color: #eee;
+	background-image: url("jumbotron4.jpg");
+	height: 600px;
+	border-bottom: 1px solid #eee;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.jumbotron .container {
+	padding: 20px;
+}
+
+.jumbotron h1 {
+	color: #333333;
+	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 48px;
+	font-style: bold;
+	font-weight: 900;
+	}
+
+.jumbotron h2 {
+	color: #333333;
+	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+.jumbotron p {
+	color: #333333;
+	margin-bottom:15px;
+	font-size:20px;
+	font-weight:200;
+	font-style: normal;
+	line-height: 30px;
+	word-spacing: 0px;
+}
+
+.jumbotron > hr {
+	border-top-color:#d5d5d5
+	}
+
+
+.footer {
+	background-color: #444444;
+	color: #ededed;
+	padding: 5px;
+}
+
+.footer p {
+	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
