@@ -19,6 +19,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li><%= link_to "Dashboard", seller_path %></li>
           <li><%= link_to (current_user.name), edit_user_registration_path %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <li><%= link_to "Create Event", new_listing_path, class: "btn btn-danger btn-sm" %></li>
