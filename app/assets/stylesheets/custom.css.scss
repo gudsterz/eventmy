@@ -50,7 +50,7 @@ body {
 }
 
 
-.jumbotron {
+.listing .jumbotron {
 	padding: 30px 15px;
 	margin-bottom: 30px;
 	color:inherit;
@@ -64,11 +64,11 @@ body {
     background-size: cover;
 }
 
-.jumbotron .container {
+.listing .jumbotron .container {
 	padding: 20px;
 }
 
-.jumbotron h1 {
+.listing .jumbotron h1 {
 	color: #333333;
 	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 48px;
@@ -76,12 +76,12 @@ body {
 	font-weight: 900;
 	}
 
-.jumbotron h2 {
+.listing .jumbotron h2 {
 	color: #333333;
 	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	}
 
-.jumbotron p {
+.listing .jumbotron p {
 	color: #333333;
 	margin-bottom:15px;
 	font-size:20px;
@@ -91,7 +91,7 @@ body {
 	word-spacing: 0px;
 }
 
-.jumbotron > hr {
+.listing .jumbotron > hr {
 	border-top-color:#d5d5d5
 	}
 
@@ -139,9 +139,30 @@ body {
 	word-spacing: 0px;
 }
 
+.seller .jumbotron {
+	color:inherit;
+	background-color: #A6D0E8;
+	border-bottom: 1px solid #eee;
+    height: 250px;
+}
+
+.seller .jumbotron h1 {
+	color: #efefef;
+	font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 48px;
+	text-shadow: 1px 1px 2px #000000;
+	font-style: bold;
+	font-weight: 900;
+	line-height: 200px;
+	}
+
 
 .listing_show .container {
 	padding: 50px;
+}
+
+.seller .container {
+	padding-top: 20px;
 }
 
 .footer {
