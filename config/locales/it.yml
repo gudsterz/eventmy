@@ -1,0 +1,5 @@
+it:
+  number:
+    currency:
+      format:
+        unit: 'RM'
