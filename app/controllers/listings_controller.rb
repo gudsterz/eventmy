@@ -11,7 +11,16 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @listings = Listing.all.order("created_at DESC")
+    @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
+      marker.lat listing.latitude
+      marker.lng listing.longitude
+      marker.infowindow listing.name
+    end
   end
+
+  def gmaps4rails_infowindow
+      # add here whatever html content you desire, it will be displayed when users clicks on the marker
+    end
 
   # GET /listings/1
   # GET /listings/1.json
@@ -76,7 +85,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :image)
+      params.require(:listing).permit(:name, :description, :price, :image, :address, :longitude, :latitude)
     end
 
     def check_user

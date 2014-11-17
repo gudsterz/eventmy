@@ -11,6 +11,9 @@ class Listing < ActiveRecord::Base
 	validates :name, :description, :price, presence: true
 	validates :price, numericality: { greater_than_or_equal_to: 0 }
 
+	geocoded_by :address               # can also be an IP address
+	after_validation :geocode          # auto-fetch coordinates
+
 	belongs_to :user
 	has_many :orders
 end
