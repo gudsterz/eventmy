@@ -15,5 +15,6 @@ class Listing < ActiveRecord::Base
 	after_validation :geocode          # auto-fetch coordinates
 
 	belongs_to :user
+	belongs_to :category
 	has_many :orders
 end

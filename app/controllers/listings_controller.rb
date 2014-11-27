@@ -1,3 +1,5 @@
+
+
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
@@ -10,17 +12,18 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all.order("created_at DESC")
+    if params[:category].blank?
+      @listings = Listing.all.order("created_at DESC")
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @listings = Listing.where(category_id: @category_id).order("created_at DESC")
+    end
     @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
       marker.lat listing.latitude
       marker.lng listing.longitude
       marker.infowindow listing.name
     end
   end
-
-  def gmaps4rails_infowindow
-      # add here whatever html content you desire, it will be displayed when users clicks on the marker
-    end
 
   # GET /listings/1
   # GET /listings/1.json
@@ -85,7 +88,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :image, :address, :longitude, :latitude)
+      params.require(:listing).permit(:name, :category_id, :description, :price, :image, :address, :longitude, :latitude)
     end
 
     def check_user

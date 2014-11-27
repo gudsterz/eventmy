@@ -45,6 +45,8 @@ gem "figaro"
 gem 'devise'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'simple_form'
+gem 'rqrcode'
 
 group :production do
 	gem 'pg'

@@ -7,8 +7,10 @@
       <h1>Malaysian Event Marketplace</h1>
           <p>Whether you're organizing a seminar, fundraising dinner, academic exhibition or <br>business conference, EventMy provides the online tools you need</p>
           <br>
-          <p><%= link_to 'Sign Up &raquo;'.html_safe, new_user_registration_path, class: "btn btn-primary btn-lg" %>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Explore Events &raquo;</a></p>
+          <%= link_to new_user_registration_path, class: "btn btn-primary btn-lg" do %>
+            <i class="glyphicon glyphicon-hdd"></i>Sign Up Today<% end %>
+          
+          <a class="btn btn-primary btn-lg" href="#" role="button">Explore Events &raquo;</a>
      
     </div>
   </div>
@@ -33,17 +35,17 @@
     </div>
   </div>
 <br>
-  <div style='width: 100%;'>
-    <div id="map" style='width: 100%; height: 400px;'></div>
-  </div>
+    <div style='width: 100%;'>
+      <div id="map" style='width: 100%; height: 400px;'></div>
+    </div>
 
 <script type="text/javascript">
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-  });
+ handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
 </script>
 
 </div>
